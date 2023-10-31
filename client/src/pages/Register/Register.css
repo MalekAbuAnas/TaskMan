@@ -1,0 +1,53 @@
+.register{
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../../assets/images/bg/BG01.jpg) center fixed no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.register-text{
+    padding-top: calc(var(--padding-primary)*3);
+    padding-bottom: var(--padding-primary);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.register-text h1{
+    color: var(--c-white);
+    font-size: var(--f-s-title);
+}
+.register-text p{
+    color: var(--c-white);
+    font-size: var(--f-s-tagline);
+}
+.register-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.register-body .input-container{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: calc(var(--margin-primary)/2.5) 0;
+    text-align: center;
+    display: flex;
+}
+.register-body .input-container input{
+    min-width: 650px;
+    margin: 0 30px;
+}
+.register-body .register-btns button{
+    margin: calc(var(--margin-primary)/3);
+}
+.register-message{
+    color: var(--c-white);
+    font-size: var(--f-s-tagline);
+    margin-top: 50px;
+}

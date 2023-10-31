@@ -23,6 +23,11 @@ mongoose.connect(BASE_URL).then(
 
 const AdminModel = require('./models/Admins');
 
+app.get('/admins', async (req, res) => {
+    const admins = await AdminModel.find();
+    res.json(admins)
+})
+
 app.post('/register', async (req, res) => {
     const {username, password} = req.body;
 

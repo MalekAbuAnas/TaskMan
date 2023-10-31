@@ -1,0 +1,84 @@
+:root{
+    /*Colors*/
+    --c-white: #fff;
+    --c-black: #000;
+    --c-transparent: rgba(0,0,0,0);
+    /*Font*/
+    --f-s-tagline: 20px;
+    --f-s-title: 70px;
+    /*Distence*/
+    --dist-primary: 50px;
+    --margin-primary: var(--dist-primary);
+    --padding-primary: var(--dist-primary);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.Button{
+    height: 50px;
+    width: fit-content;
+    padding: 0 30px;
+    color: var(--c-black);
+    background: var(--c-white);
+    border: 1px solid var(--c-transparent);
+    transition: 0.5s;
+}
+.Button:hover{
+    background: none;
+    color: var(--c-white);
+    border: 1px solid var(--c-white);
+}
+.Button-outline{
+    height: 50px;
+    width: fit-content;
+    padding: 0 30px;
+    color: var(--c-white);
+    background: none;
+    border: 1px solid var(--c-white);
+    transition: 0.5s;
+}
+.Button-outline:hover{
+    background: var(--c-white);
+    color: var(--c-black);
+    border: 1px solid var(--c-transparent);
+}
+.Input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--c-white);
+    height: 50px;
+    outline: none;
+    color: var(--c-white);
+}
+.Input::placeholder{
+    color: var(--c-white);
+}
+.diamond{
+    width: 30px;
+    height: 30px;
+    background: rgba(255,255,255,0.1);
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: rotate(-135deg);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.diamond:hover{
+    background: rgba(255,255,255,0.4);
+}
+.line{
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 700px;
+    margin-top: 30px;
+}
+.line-black{
+    height: 1px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 700px;
+    margin-top: 30px;
+}
