@@ -1,0 +1,21 @@
+.footer{
+    height: 30px;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+.footer h5{
+    color: var(--c-white);
+    font-size: 20px;
+    font-weight: 200;
+}
+.footer h5 a{
+    text-decoration: none;
+    color: var(--c-white);
+    transition: 0.5s;
+}
+.footer h5 a:hover{
+    color: #d8d8d8;
+}

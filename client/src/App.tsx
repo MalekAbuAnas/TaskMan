@@ -1,13 +1,15 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Register } from "./pages/index";
+import { Home, Register, SignIn } from "./pages/index";
 
 export const API = "http://localhost:3001";
 
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/signin" element={<SignIn />} />
     </Routes>
   );
 }

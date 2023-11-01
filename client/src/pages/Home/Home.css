@@ -1,0 +1,41 @@
+.home{
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../assets/images/bg/BG03.jpg) center fixed no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.home-text{
+    padding-top: calc(var(--padding-primary)*2.5);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.home-text h1{
+    font-size: var(--f-s-title);
+    color: var(--c-white);
+    margin: calc(var(--margin-primary)/2) 0;
+}
+.home-text p{
+    font-size: var(--f-s-tagline);
+    color: var(--c-white);
+    margin: calc(var(--margin-primary)/2) 0;
+    letter-spacing: 10px;
+}
+.home-btns{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.home-btns button{
+    margin: calc(var(--margin-primary)/3);
+}
+.home-diamond{
+    margin-bottom: calc(var(--margin-primary)*5);
+    margin-top: calc(var(--margin-primary)*1);
+}

@@ -1,6 +1,6 @@
 .register{
     height: 100vh;
-    background: linear-gradient(0deg, rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../../assets/images/bg/BG01.jpg) center fixed no-repeat;
+    background: linear-gradient(0deg, rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url(../../assets/images/bg/BG03.jpg) center fixed no-repeat;
     background-size: cover;
     background-attachment: fixed;
     align-items: center;

@@ -1,4 +1,5 @@
 //import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -7,9 +8,9 @@ const Navbar = () => {
   return (
     <div className="navbar navbar-expand-md bg-none navbar-dark text-white">
       <div className="container">
-        <a href="#" className="navbar-brand">
-          Task Man
-        </a>
+        <Link to={"/"} className="text-decoration-none">
+          <a className="navbar-brand">Task Man</a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,6 +22,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="mainmenu">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
+              <Link to={"/"} className="text-decoration-none">
+                <a className="nav-link underline" style={{ cursor: "pointer" }}>
+                  Home
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link underline" style={{ cursor: "pointer" }}>
                 Theme
               </a>
@@ -31,9 +39,11 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link underline" style={{ cursor: "pointer" }}>
-                Register
-              </a>
+              <Link to={"/register"} className="text-decoration-none">
+                <a className="nav-link underline" style={{ cursor: "pointer" }}>
+                  Register
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

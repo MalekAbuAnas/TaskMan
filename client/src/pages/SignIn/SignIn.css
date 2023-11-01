@@ -1,0 +1,48 @@
+.sign-in{
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url(../../assets/images/bg/BG03.jpg) center fixed no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sign-in-text{
+    padding-top: calc(var(--padding-primary)*3);
+    padding-bottom: var(--padding-primary);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.sign-in-text h1{
+    color: var(--c-white);
+    font-size: var(--f-s-title);
+}
+.sign-in-text p{
+    color: var(--c-white);
+    font-size: var(--f-s-tagline);
+}
+.sign-in-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sign-in-body .sign-in-input-container{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: calc(var(--margin-primary)/2.5) 0;
+    text-align: center;
+    display: flex;
+}
+.sign-in-body .sign-in-input-container input{
+    min-width: 650px;
+    margin: 0 30px;
+}
+.sign-in-body .sign-in-btns button{
+    margin: calc(var(--margin-primary)/3);
+}

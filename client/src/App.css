@@ -5,7 +5,7 @@
     --c-transparent: rgba(0,0,0,0);
     /*Font*/
     --f-s-tagline: 20px;
-    --f-s-title: 70px;
+    --f-s-title: 100px;
     /*Distence*/
     --dist-primary: 50px;
     --margin-primary: var(--dist-primary);
@@ -21,6 +21,7 @@
 .Button{
     height: 50px;
     width: fit-content;
+    min-width: 200px;
     padding: 0 30px;
     color: var(--c-black);
     background: var(--c-white);
@@ -31,8 +32,10 @@
     background: none;
     color: var(--c-white);
     border: 1px solid var(--c-white);
+    letter-spacing: 3px;
 }
 .Button-outline{
+    min-width: 200px;
     height: 50px;
     width: fit-content;
     padding: 0 30px;
@@ -45,6 +48,7 @@
     background: var(--c-white);
     color: var(--c-black);
     border: 1px solid var(--c-transparent);
+    letter-spacing: 3px;
 }
 .Input{
     background: none;
@@ -68,6 +72,19 @@
     transition: 0.5s;
 }
 .diamond:hover{
+    background: rgba(255,255,255,0.4);
+}
+.big-diamond{
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.1);
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: rotate(-135deg);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.big-diamond:hover{
     background: rgba(255,255,255,0.4);
 }
 .line{
