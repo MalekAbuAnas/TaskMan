@@ -1,15 +1,35 @@
 import "./SignIn.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "../../components/index";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { API } from "../../App";
 
 export default function SignIn() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+
+  const login = () => {
+    axios
+      .post(`${API}/login`, { username, password })
+      .then(() => {
+        if (username && password) {
+          navigate("/tasks", { state: { username } });
+        } else {
+          console.log("Username or password doesn't exist");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="sign-in">
@@ -28,6 +48,7 @@ export default function SignIn() {
             type="text"
             placeholder="Username ..."
             className="Input"
+            onChange={(e) => setUsername(e.target.value)}
             required
           />
         </div>
@@ -37,11 +58,14 @@ export default function SignIn() {
             type="password"
             placeholder="Password ..."
             className="Input"
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
         <div className="sign-in-btns" data-aos="fade-up">
-          <button className="Button">Sign in</button>
+          <button className="Button" onClick={login}>
+            Sign in
+          </button>
           <Link to={"/"}>
             <button className="Button-outline">Cancel</button>
           </Link>

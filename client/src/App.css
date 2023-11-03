@@ -34,6 +34,34 @@
     border: 1px solid var(--c-white);
     letter-spacing: 3px;
 }
+.Button-task{
+    height: 50px;
+    width: fit-content;
+    padding: 0 30px;
+    color: var(--c-black);
+    background: var(--c-white);
+    border: 1px solid var(--c-transparent);
+    transition: 0.5s;
+}
+.Button-task:hover{
+    background: none;
+    color: var(--c-white);
+    border: 1px solid var(--c-white);
+}
+.Button-outline-task{
+    height: 50px;
+    width: fit-content;
+    padding: 0 30px;
+    color: var(--c-white);
+    background: none;
+    border: 1px solid var(--c-white);
+    transition: 0.5s;
+}
+.Button-outline-task:hover{
+    background: var(--c-white);
+    color: var(--c-black);
+    border: 1px solid var(--c-transparent);
+}
 .Button-outline{
     min-width: 200px;
     height: 50px;

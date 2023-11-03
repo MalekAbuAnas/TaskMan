@@ -10,6 +10,9 @@ const AdminSchema = new Schema({
         type: String,
         required: true
     },
+    tasks: {
+        type: Array,
+    }
 });
 
 const AdminModel = model("admins", AdminSchema);

@@ -1,0 +1,16 @@
+.taskbar-input-container{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: calc(var(--margin-primary)/2.5) 0;
+    text-align: center;
+    display: flex;
+    position: fixed;
+    right: 25%;
+    top: 85%;
+    width: 50%;
+}
+.taskbar{
+    width: 100%;
+    margin-left: calc(var(--margin-primary)/2);
+}

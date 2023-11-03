@@ -21,7 +21,10 @@ mongoose.connect(BASE_URL).then(
 
 // ===== ROUTING =====
 
+
+// ----- Models Importance -----
 const AdminModel = require('./models/Admins');
+const TaskModal = require('./models/Tasks');
 
 app.get('/admins', async (req, res) => {
     const admins = await AdminModel.find();
@@ -45,7 +48,33 @@ app.post('/register', async (req, res) => {
     return res.send("Admin created successfully");
 });
 
-app.post("/login", async (req, res) => {
+app.post('/login', async (req, res) => {
+    const {username, password} = req.body;
+    const admin = await AdminModel.findOne({username});
+
+    const isPasswordValid = await bcrypt.compare(password, admin.password);
+
+    if (username && isPasswordValid) {
+        res.json(admin);
+    }else{
+        res.json({message: "Error"});
+    };
+})
+
+app.get("/tasks", async (req, res) => {
+    const tasks = await TaskModal.find();
+    res.json(tasks);
+});
+
+app.post("/addtask", async (req, res) => {
+    const {task} = req.body;
+    
+    const newTask = new TaskModal({
+        task: task
+    });
+    await newTask.save();
+});
+/** app.post("/login", async (req, res) => {
     const {username, password} = req.body;
 
     
@@ -61,7 +90,7 @@ app.post("/login", async (req, res) => {
     return res.json({
         token, adminId : admin._id
     })
-});
+});*/
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

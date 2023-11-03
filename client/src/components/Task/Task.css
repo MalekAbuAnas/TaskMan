@@ -1,0 +1,29 @@
+.task-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.task{
+    display: flex;
+    height: 70px;
+    background: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin-left: calc(var(--margin-primary)/2);
+}
+.task-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+.task-data h1{
+    color: var(--c-white);
+    font-size: calc(var(--f-s-tagline)*1.5);
+    font-weight: 300;
+}

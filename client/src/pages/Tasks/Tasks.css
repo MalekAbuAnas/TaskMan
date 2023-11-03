@@ -1,0 +1,28 @@
+.tasks{
+    height: fit-content;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url(../../assets/images/bg/BG03.jpg) center fixed no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.tasks-text{
+    padding-top: calc(var(--padding-primary)*3);
+    padding-bottom: var(--padding-primary);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.tasks-text h1{
+    color: var(--c-white);
+    font-size: calc(var(--f-s-title)*1);
+}
+.tasks-text h3{
+    color: var(--c-white);
+    font-size: calc(var(--f-s-title)/3.5);
+}

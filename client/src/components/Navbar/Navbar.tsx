@@ -22,27 +22,27 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="mainmenu">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to={"/"} className="text-decoration-none">
-                <a className="nav-link underline" style={{ cursor: "pointer" }}>
-                  Home
-                </a>
+              <Link
+                to={"/"}
+                className="nav-link underline text-decoration-none"
+              >
+                Home
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link underline" style={{ cursor: "pointer" }}>
-                Theme
-              </a>
+              <Link
+                to={"/Signin"}
+                className="nav-link underline text-decoration-none"
+              >
+                Signin
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link underline" style={{ cursor: "pointer" }}>
-                Sign in
-              </a>
-            </li>
-            <li className="nav-item">
-              <Link to={"/register"} className="text-decoration-none">
-                <a className="nav-link underline" style={{ cursor: "pointer" }}>
-                  Register
-                </a>
+              <Link
+                to={"/register"}
+                className="nav-link underline text-decoration-none"
+              >
+                Register
               </Link>
             </li>
           </ul>
